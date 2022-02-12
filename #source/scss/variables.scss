@@ -1,0 +1,76 @@
+$fwlight:300;
+$fwregular:400;
+$fwbold:700;
+$fwblack:900;
+
+$xs: 412px;
+$sm: 577px;
+$md: 768px;
+$lg: 993px;
+$xl: 1200px;
+$xxl: 1400px;
+
+
+%title{
+    font-size: 45px;
+    letter-spacing: 1px;
+    line-height: 66px;
+    color: #262f32;
+    font-weight: 300;
+        & span {
+            font-weight: $fwbold;
+        }
+}
+
+%text{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    color: #262f32;
+    font-weight: $fwregular;
+}
+
+%button{
+    display: block;
+    padding-top:15px;
+    width: 210px;
+    height: 50px;
+    border-radius: 11px;
+    border: 1px solid #262f32;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #262f32;
+    font-weight: 400;
+    text-align: center;
+}
+
+%icon{
+    display: inline-block;
+    width: 44px;
+    height: 45px;
+    border-radius: 7px;
+}
+
+%input{
+    display: block;
+    width: 100%;
+    height: 55px;
+    border-radius: 13px;
+    border: 1px solid #ffffff;
+    display: block;
+    background: none;
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 32px;
+    color: #ffffff;
+    font-weight: $fwlight;
+    &::-webkit-input-placeholder{
+        color: #fff
+    }
+    &::-moz-placeholder { 
+        color: #fff;
+      }
+      &::-ms-placeholder { 
+        color: #fff;
+      }
+}

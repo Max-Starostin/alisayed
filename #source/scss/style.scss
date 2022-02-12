@@ -1,0 +1,316 @@
+@import "../scss/nullstyle";
+@import "../scss/variables";
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+ .burger-menu{
+    position: relative;
+    display: block;
+    width: 33px;
+    height: 29px;
+        & span{
+            position: absolute;
+            background-color: #3a4245;
+            width: 100%;
+            height: 3px;
+            top: 45%;
+            right: 0;
+        }
+        &::before{
+            content: ' ';
+            position: absolute;
+            background-color: #3a4245;
+            width: 100%;
+            height: 3px;
+            top: 0;
+            right: 0;
+        }    
+        &::after{
+            content: ' ';
+            position: absolute;
+            background-color: #3a4245;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            right: 0;
+        }
+ } 
+ 
+ .header{
+     display: grid;
+        &__photo img {
+            width: 100%;
+            height: 945px;
+        }
+        &__description{
+            background-color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 80px 90px;
+        }
+        &__title{
+            @extend %title;
+                & span{
+                    display: block
+                }
+        }
+        &__text{
+            @extend %text;
+        }
+
+        @media (max-width:$xxl) {
+            &__description{
+                padding: 20px ;
+                justify-content: space-around;
+            }
+        }
+        @media (min-width:$lg) {
+            grid-template-columns: 10fr 4fr;
+        }
+        @media (max-width:$lg) {
+            &__description{
+                order: -1;
+                padding: 30px;
+                height: 500px;
+            }
+        }
+        @media (max-width:$sm) {
+            &__photo{
+                height: 650px;
+            }
+        }
+        @media (max-width:$xs) {
+            &__description{
+                height: 650px;
+                order: -1;
+            }
+        }
+ }
+
+ section{ 
+    display: grid;
+        @media (min-width:$sm) {
+            grid-template-columns: 3fr 4fr;
+        }
+        @media (max-width:$sm) {
+            grid-template-rows: 1fr 1fr ;
+        }
+ }
+
+ .skills{
+     background: url("../img/skills.png") no-repeat center / cover ;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding: 40px 120px 40px 60px;
+        &__title{
+            @extend %title;
+            color: #fff;
+            margin-bottom: 47px;
+        }
+        &__text{
+            @extend %text;
+            color: #fff;
+            font-weight: $fwlight;
+        }
+    @media (max-width:$xl) {
+        padding: 40px 80px 40px 30px;
+    }
+    @media (max-width:$md) {
+        padding: 40px 30px
+    }
+    @media (max-width:$sm) {
+        &__text{
+            margin-bottom: 20px;
+        }
+    }
+ }
+
+ .starting{
+     height: 50%;
+     background: url("../img/starting.png") no-repeat center / cover ;
+     background-repeat: no-repeat;
+    padding: 70px 250px 70px 70px;
+        &__title{
+            @extend %title;
+            color: #262f32;
+            margin-bottom: 48px;
+        }
+        &__text{
+            @extend %text;
+            color: #262f32;
+            margin-bottom: 57px;
+        }
+        &__button{
+            @extend %button;
+        }
+    @media (max-width:$lg) {
+        padding: 70px 100px 70px 70px;
+    }
+    @media (max-width:$md) {
+        padding: 70px ;
+    }
+    @media (max-width:$xs) {
+        padding: 70px 10px 70px 10px ;
+    }
+ }
+
+.verified{
+    height: 50%;
+    background: url("../img/verified.png") no-repeat center / cover ;
+    padding: 70px 250px 70px 70px;
+        &__title{
+            @extend %title;
+            color: #fff;
+            margin-bottom: 48px;
+        }
+        &__text{
+            @extend %text;
+            color: #fff;
+            margin-bottom: 57px;
+        }
+
+        &__button{
+            @extend %button;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        @media (max-width:$lg) {
+            padding: 70px 100px 70px 70px;
+        }
+        @media (max-width:$md) {
+            padding: 70px ;
+        }
+        @media (max-width:$xs) {
+            padding: 70px 10px 70px 10px ;
+        }
+ }
+
+.footer{
+    display: grid;
+        @media (min-width:$lg) {
+            grid-template-columns: 4fr 10fr;
+        }
+        @media (min-width:$md) {
+            grid-template-columns: 5fr 10fr;
+        }
+        @media (max-width:$md) {
+            grid-template-columns: none;
+        }
+}
+
+.designed{
+    background: url('../img/designed.png') no-repeat center / cover;
+    padding: 74px 74px 74px 60px;
+    &__title{
+        @extend %title;
+        color: #fff;
+        margin-bottom: 267px;
+    }
+    &__subtitle{
+        font-size: 42px;
+        letter-spacing: 1px;
+        line-height: 66px;
+        color: #ffffff;
+        font-weight: $fwblack;
+    }
+    &__prof{
+        font-size: 17px;
+        letter-spacing: 1px;
+        line-height: 66px;
+        color: #ffffff;
+        font-weight: $fwlight;
+    }
+    @media (max-width:$xl) {
+        padding: 61px 30px;
+    }
+
+}
+
+.contact{
+    background: url('../img/contact.png') no-repeat center / cover;
+    padding: 76px 0px 0px 56px;
+        &__title{
+            @extend %title;
+            color: #fff;
+            margin-bottom: 49px;
+        }
+
+        &__form{
+            display: grid;
+            gap:11px ;
+            grid-template-areas:"name email"
+                                             "message message" ;
+            width: 70%;
+            margin: 0px 0px 100px 0px;
+        }
+
+        &__name{
+            @extend %input;
+            padding-left: 27px;
+            grid-area: name;
+        }
+        &__email{
+            @extend %input;
+            padding-left: 27px;
+            grid-area: email;
+        }
+        &__message{
+            padding: 23px 0px 0px 27px;
+            @extend %input;
+            resize: none;
+            height: 200px;
+            grid-area: message;
+        }
+        &__text{
+            font-size: 17px;
+            letter-spacing: 1px;
+            line-height: 32px;
+            color: #ffffff;
+            font-weight: $fwlight;
+            margin: 0px 0px 22px 0px;
+                &:last-child{
+                    margin: 0px;
+                }
+        }
+
+        &__icons{
+            margin: 0px 0px 49px 0px;
+            display: flex;
+            &-facebook{
+                @extend %icon;
+                background-color: #345bb4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /*padding: 10px 0px 0px 16px;*/
+            }
+            &-dribbble{
+                @extend %icon;
+                background-color: #e64895;
+                margin: 0px 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /*padding: 10px 0px 0px 10px;*/
+            }
+            &-twitter{
+                @extend %icon;
+                background-color: #00b4ff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               /* padding: 13px 0px 0px 10px;*/
+            }
+        }
+        @media(max-width:$xs) {
+            padding: 30px 0px 0px 30px;
+            &__form{
+                width: 90%;
+            }
+        }
+}
