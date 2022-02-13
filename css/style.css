@@ -105,6 +105,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #262f32;
   font-weight: 400;
   text-align: center;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background, color, border;
+  transition-property: background, color, border;
 }
 
 .contact__icons-facebook, .contact__icons-dribbble, .contact__icons-twitter {
@@ -112,6 +116,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 44px;
   height: 45px;
   border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact__name, .contact__email, .contact__message {
@@ -330,6 +343,25 @@ section {
   margin-bottom: 57px;
 }
 
+.starting__button {
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+}
+
+.starting__button:hover {
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  background: #000;
+  color: #fff;
+}
+
+.starting__button:focus {
+  -webkit-box-shadow: 1px 1px 10px #000;
+          box-shadow: 1px 1px 10px #000;
+}
+
 @media (max-width: 993px) {
   .starting {
     padding: 70px 100px 70px 70px;
@@ -367,6 +399,24 @@ section {
 .verified__button {
   border: 1px solid #fff;
   color: #fff;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+}
+
+.verified__button:hover {
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  background: #fff;
+  color: #000;
+}
+
+.verified__button:focus {
+  -webkit-box-shadow: 1px 1px 10px #fff;
+          box-shadow: 1px 1px 10px #fff;
 }
 
 @media (max-width: 993px) {
@@ -510,45 +560,66 @@ section {
 
 .contact__icons-facebook {
   background-color: #345bb4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /*padding: 10px 0px 0px 16px;*/
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+.contact__icons-facebook:hover {
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  background-color: #062d88;
+}
+
+.contact__icons-facebook:focus {
+  -webkit-box-shadow: 1px 1px 10px #062d88;
+          box-shadow: 1px 1px 10px #062d88;
 }
 
 .contact__icons-dribbble {
   background-color: #e64895;
   margin: 0px 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /*padding: 10px 0px 0px 10px;*/
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+.contact__icons-dribbble:hover {
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  background-color: #fa027a;
+}
+
+.contact__icons-dribbble:focus {
+  -webkit-box-shadow: 1px 1px 10px #fa027a;
+          box-shadow: 1px 1px 10px #fa027a;
 }
 
 .contact__icons-twitter {
   background-color: #00b4ff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* padding: 13px 0px 0px 10px;*/
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+.contact__icons-twitter:hover {
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  background-color: #03eeff;
+}
+
+.contact__icons-twitter:focus {
+  -webkit-box-shadow: 1px 1px 10px #03eeff;
+          box-shadow: 1px 1px 10px #03eeff;
 }
 
 @media (max-width: 412px) {
